@@ -5,13 +5,38 @@ using UnityEngine.XR;
 
 public class TriggerZone : MonoBehaviour
 {
-    [SerializeField] GameObject hat;
+    //[SerializeField] GameObject hat;
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if(other.tag == "Player")
+    //     {
+    //         hat.gameObject.SetActive(false);
+    //     }
+    // }
+
+    private void Start()
+    {
+        button.gameObject.SetActive(false);
+    }
+
+    [SerializeField] GameObject button; 
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            hat.gameObject.SetActive(false);
+            button.gameObject.SetActive(true);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            button.gameObject.SetActive(false);
+        }
+    }
+
+
 }
