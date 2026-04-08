@@ -8,6 +8,8 @@ TagManager:
   - Key
   - solarPanel
   - Shovel
+  - Hat
+  - Hand
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Player
   - Ground
   - Grab
-  - 
+  - Grabbable
   - 
   - 
   - 
