@@ -35764,24 +35764,36 @@ PrefabInstance:
       value: Prop_WoodenChest_02
       objectReference: {fileID: 0}
     - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0000008613432
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8180421
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5600032
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99999994
+      value: 0.9050433
       objectReference: {fileID: 0}
     - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00035872063
+      value: -0.42531952
       objectReference: {fileID: 0}
     - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000004470349
+      value: -0.000000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000043481126
+      value: -0.0000000744476
       objectReference: {fileID: 0}
     - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.041
+      value: -50.342
       objectReference: {fileID: 0}
     - target: {fileID: 3213424219989698925, guid: 299f0ebd1625d694f8b6de2826f9c989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
