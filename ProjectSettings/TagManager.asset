@@ -10,6 +10,10 @@ TagManager:
   - Shovel
   - Hat
   - Hand
+  - Apple
+  - Banana
+  - Orange
+  - Watermelon
   layers:
   - Default
   - TransparentFX
