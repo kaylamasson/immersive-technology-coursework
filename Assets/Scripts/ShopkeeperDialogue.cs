@@ -15,7 +15,7 @@ public class ShopkeeperDialogue : MonoBehaviour
     [SerializeField] GameObject dialogueSystem; 
     [SerializeField] GameObject key;
 
-    // [SerializeField] GameObject solarPanel_grabbable; 
+    [SerializeField] GameObject shopSolarPanel; 
 
 
     private bool panelReturned; 
@@ -29,6 +29,7 @@ public class ShopkeeperDialogue : MonoBehaviour
         dialogueSystem.gameObject.SetActive(false);
         startButton.gameObject.SetActive(false);
         panelReturned = false; 
+        shopSolarPanel.SetActive(false);
 
 
     }
@@ -50,6 +51,7 @@ public class ShopkeeperDialogue : MonoBehaviour
 
             //Hide solar panel game object
             other.gameObject.SetActive(false);
+            shopSolarPanel.SetActive(true);
 
 
         }

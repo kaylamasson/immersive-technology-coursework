@@ -17,6 +17,8 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField] GameObject dialogueSystem; 
     [SerializeField] GameObject NPC_hat; 
 
+    [SerializeField] GameObject hat_object;
+
 
     [SerializeField] GameObject solarPanel_static; 
     [SerializeField] GameObject solarPanel_grabbable; 
@@ -36,15 +38,20 @@ public class NPCDialogue : MonoBehaviour
         solarPanel_static.SetActive(true); 
         solarPanel_grabbable.SetActive(false); 
 
+        hat_object.SetActive(false); 
+
     }
 
     void OnTriggerEnter(Collider other)
     {
 
         if (other.tag=="Player" && hatReturned == false){
+
             startButton.gameObject.SetActive(true);
             ShowMessage(initial_dialogue[0]);
             counter ++; 
+            hat_object.SetActive(true); 
+
         } else if (other.tag=="Hat"){
 
             dialogueSystem.gameObject.SetActive(true);

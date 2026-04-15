@@ -12,7 +12,6 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] GameObject orangeCrate; 
     [SerializeField] GameObject watermelonCrate; 
 
-    // [SerializeField] GameObject[] fruitCrates = {appleCrate, bananaCrate, orangeCrate, watermelonCrate};
 
     private bool appleDone;
     private bool bananaDone;
@@ -20,54 +19,19 @@ public class GameStateManager : MonoBehaviour
     private bool watermelonDone;
 
     [SerializeField] AudioSource winSound;
-    
 
+    [SerializeField] GameObject chest; 
+    [SerializeField] Animator animator;
+
+    void Start()
+    {
+        animator = chest.GetComponent<Animator>(); // get animator from chest
+    }
     // Update is called once per frame
     void Update()
     {
         CheckAllFruits();   
     }
-
-
-    // void CheckApple()
-    // {
-    //    if (allFruitsMatched[0] == false)
-    //    { 
-    //     if (appleCrate.GetComponent<FruitMatch>().getFruitMatched() == true){
-    //         allFruitsMatched[0] = true;
-    //     }
-    //    }
-    // }
-
-    // void CheckBanana()
-    // {
-    //    if (allFruitsMatched[1] == false)
-    //    { 
-    //     if (bananaCrate.GetComponent<FruitMatch>().getFruitMatched() == true){
-    //         allFruitsMatched[1] = true;
-    //     }
-    //    }
-    // }
-
-    // void CheckOrange()
-    // {
-    //    if (allFruitsMatched[2] == false)
-    //    { 
-    //     if (orangeCrate.GetComponent<FruitMatch>().getFruitMatched() == true){
-    //         allFruitsMatched[2] = true;
-    //     }
-    //    }
-    // }
-
-    //  void CheckWatermelon()
-    // {
-    //    if (allFruitsMatched[3] == false)
-    //    { 
-    //     if (watermelonCrate.GetComponent<FruitMatch>().getFruitMatched() == true){
-    //         allFruitsMatched[3] = true;
-    //     }
-    //    }
-    // }
 
     void CheckAllFruits()
     {
@@ -97,34 +61,15 @@ public class GameStateManager : MonoBehaviour
             if (appleDone && bananaDone && orangeDone && watermelonDone)
             {
                 puzzleComplete = true;
-                winSound.Play(1);
-
-                // appleCrate.SetActive(false);
-                // bananaCrate.SetActive(false);
-
+                OpenChest();
             }
         }
+
+        void OpenChest()
+        {
+            winSound.Play(1);
+            animator.SetBool("open", true); 
+        }
     }   
-
-
-    //     CheckApple();
-    //     CheckBanana();
-    //     CheckOrange();
-    //     CheckWatermelon(); 
-
-    //     for (int i = 0; i < allFruitsMatched.Length; i++) {
-    //         if (allFruitsMatched[i] == true){
-    //             puzzleComplete = true; 
-    //         } else { 
-    //             puzzleComplete = false;
-    //         }
-            
-    //     }
-
-    //     if (puzzleComplete == true){
-    //         Debug.Log("Puzzle complete");
-    //         appleCrate.SetActive(false); 
-
-    //     }
-    }
+}
 

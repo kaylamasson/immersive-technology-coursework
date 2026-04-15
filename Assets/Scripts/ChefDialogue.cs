@@ -9,11 +9,16 @@ public class ChefDialogue : MonoBehaviour
     "Oh, will you help me? Bring me a solar panel so I can start baking?"};
 
     string[] panel_dialogue = new string[] {"Great! Now I can power my oven and start baking.", 
-                                            "I'll finally be able to make some food for the customers, thank you so much!"};
+                                            "I'll finally be able to make some food for the customers, thank you so much!",
+                                            "Here's a coin, treat yourself to something from the Trendy Gift Shop!"};
 
     [SerializeField] TMP_Text dialogue_text; 
     [SerializeField] GameObject startButton;
     [SerializeField] GameObject dialogueSystem; 
+
+    [SerializeField] GameObject cafeSolarPanel; 
+
+    [SerializeField] GameObject coin; 
 
     // [SerializeField] GameObject solarPanel_grabbable; 
 
@@ -28,6 +33,8 @@ public class ChefDialogue : MonoBehaviour
         dialogueSystem.gameObject.SetActive(false);
         startButton.gameObject.SetActive(false);
         panelReturned = false; 
+        cafeSolarPanel.SetActive(false);
+        coin.SetActive(false);
 
 
     }
@@ -49,6 +56,9 @@ public class ChefDialogue : MonoBehaviour
 
             //Hide solar panel game object
             other.gameObject.SetActive(false);
+            cafeSolarPanel.SetActive(true);
+            coin.SetActive(true);
+
 
 
         }

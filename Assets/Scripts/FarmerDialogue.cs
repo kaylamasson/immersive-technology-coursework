@@ -15,6 +15,10 @@ public class FarmerDialogue : MonoBehaviour
     [SerializeField] GameObject dialogueSystem; 
     [SerializeField] GameObject shovel; 
 
+    [SerializeField] GameObject barnSolarPanel;
+
+    [SerializeField] GameObject solarPanelObject;
+
     // [SerializeField] GameObject solarPanel_grabbable; 
 
 
@@ -29,7 +33,8 @@ public class FarmerDialogue : MonoBehaviour
         startButton.gameObject.SetActive(false);
         panelReturned = false; 
         shovel.gameObject.SetActive(false); 
-
+        barnSolarPanel.SetActive(false);
+        solarPanelObject.SetActive(false);
 
     }
 
@@ -40,13 +45,15 @@ public class FarmerDialogue : MonoBehaviour
             startButton.gameObject.SetActive(true);
             ShowMessage(initial_dialogue[0]);
             counter ++; 
+            solarPanelObject.SetActive(true);
+            
         } else if (other.tag=="solarPanel"){
 
             dialogueSystem.gameObject.SetActive(true);
             ShowMessage(panel_dialogue[0]); 
             counter ++; 
             panelReturned = true;
-
+            barnSolarPanel.SetActive(true);
 
             //Hide solar panel game object
             other.gameObject.SetActive(false);
