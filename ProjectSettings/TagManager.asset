@@ -15,6 +15,7 @@ TagManager:
   - Orange
   - Watermelon
   - Ground
+  - Coin
   layers:
   - Default
   - TransparentFX

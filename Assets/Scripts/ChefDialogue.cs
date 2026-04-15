@@ -45,7 +45,8 @@ public class ChefDialogue : MonoBehaviour
         if (other.tag=="Player" && panelReturned == false){
             startButton.gameObject.SetActive(true);
             ShowMessage(initial_dialogue[0]);
-            counter ++; 
+            counter ++;
+
         } else if (other.tag=="solarPanel"){
 
             dialogueSystem.gameObject.SetActive(true);
@@ -57,10 +58,6 @@ public class ChefDialogue : MonoBehaviour
             //Hide solar panel game object
             other.gameObject.SetActive(false);
             cafeSolarPanel.SetActive(true);
-            coin.SetActive(true);
-
-
-
         }
 
     }
@@ -98,6 +95,8 @@ public class ChefDialogue : MonoBehaviour
             } else { 
                 counter = 0; 
                 dialogueSystem.SetActive(false);
+                coin.SetActive(true);
+
             }
     
         }
