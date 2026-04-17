@@ -6,9 +6,12 @@ public class Break : MonoBehaviour
 
     private bool breakable;
 
+    private AudioSource rockHit; 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rockHit = this.GetComponent<AudioSource>(); 
         rb.isKinematic = true;
         breakable = false; 
         
@@ -27,6 +30,7 @@ public class Break : MonoBehaviour
     void OnCollisionEnter(Collision other){
         if (other.gameObject.tag == "Shovel"){
             breakable = true; 
+            rockHit.Play();
         } else if (other.gameObject.tag == "Player"){
             breakable = false;
         }

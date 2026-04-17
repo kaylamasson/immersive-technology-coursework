@@ -26,6 +26,8 @@ public class FarmerDialogue : MonoBehaviour
 
     private int counter;
 
+    private AudioSource winNoise;
+
     void Start()
     {
         counter = 0; 
@@ -35,6 +37,9 @@ public class FarmerDialogue : MonoBehaviour
         shovel.gameObject.SetActive(false); 
         barnSolarPanel.SetActive(false);
         solarPanelObject.SetActive(false);
+
+        winNoise = this.GetComponent<AudioSource>(); 
+
 
     }
 
@@ -97,6 +102,7 @@ public class FarmerDialogue : MonoBehaviour
                 counter = 0; 
                 dialogueSystem.SetActive(false);
                 shovel.gameObject.SetActive(true);
+                winNoise.Play();
             }
     
         }

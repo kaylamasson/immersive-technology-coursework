@@ -20,6 +20,8 @@ public class ChefDialogue : MonoBehaviour
 
     [SerializeField] GameObject coin; 
 
+    private AudioSource winNoise;
+
     // [SerializeField] GameObject solarPanel_grabbable; 
 
 
@@ -35,6 +37,8 @@ public class ChefDialogue : MonoBehaviour
         panelReturned = false; 
         cafeSolarPanel.SetActive(false);
         coin.SetActive(false);
+
+        winNoise = this.GetComponent<AudioSource>(); 
 
 
     }
@@ -96,6 +100,7 @@ public class ChefDialogue : MonoBehaviour
                 counter = 0; 
                 dialogueSystem.SetActive(false);
                 coin.SetActive(true);
+                winNoise.Play();
 
             }
     

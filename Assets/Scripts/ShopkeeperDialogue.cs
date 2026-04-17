@@ -22,6 +22,8 @@ public class ShopkeeperDialogue : MonoBehaviour
 
     private int counter;
 
+    private AudioSource winNoise;
+
     void Start()
     {
         key.gameObject.SetActive(false);
@@ -30,6 +32,9 @@ public class ShopkeeperDialogue : MonoBehaviour
         startButton.gameObject.SetActive(false);
         panelReturned = false; 
         shopSolarPanel.SetActive(false);
+
+        winNoise = this.GetComponent<AudioSource>(); 
+
 
 
     }
@@ -92,6 +97,7 @@ public class ShopkeeperDialogue : MonoBehaviour
                 counter = 0; 
                 dialogueSystem.SetActive(false);
                 key.gameObject.SetActive(true);
+                winNoise.Play();
 
             }
     

@@ -16,9 +16,7 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField] GameObject startButton;
     [SerializeField] GameObject dialogueSystem; 
     [SerializeField] GameObject NPC_hat; 
-
     [SerializeField] GameObject hat_object;
-
 
     [SerializeField] GameObject solarPanel_static; 
     [SerializeField] GameObject solarPanel_grabbable; 
@@ -27,6 +25,8 @@ public class NPCDialogue : MonoBehaviour
     private bool hatReturned; 
 
     private int counter;
+
+    private AudioSource winNoise;
 
     void Start()
     {
@@ -39,6 +39,8 @@ public class NPCDialogue : MonoBehaviour
         solarPanel_grabbable.SetActive(false); 
 
         hat_object.SetActive(false); 
+
+        winNoise = this.GetComponent<AudioSource>(); 
 
     }
 
@@ -64,6 +66,8 @@ public class NPCDialogue : MonoBehaviour
 
             //Hide hat game object
             other.gameObject.SetActive(false);
+
+            winNoise.Play(); 
 
 
         }
