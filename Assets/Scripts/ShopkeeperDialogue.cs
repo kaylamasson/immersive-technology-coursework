@@ -4,10 +4,10 @@ using TMPro;
 public class ShopkeeperDialogue : MonoBehaviour
 {
     string[] initial_dialogue = new string[] {"Welcome to the local supermarket! We sell a little bit of everything.",
-    "Well, we will... once I get energy to power the fridges inside. For now help yourself to fruit, fruit and more fruit.",
+    "Well, right now it's just fruit... we'll have more once we have power",
     "You'll find me a solar panel? That would be so helpful!"};
 
-    string[] panel_dialogue = new string[] {"Amazing! I'm so grateful. I'll go get these fridges started now, thank you!", 
+    string[] panel_dialogue = new string[] {"Amazing! A solar panel! I'm so grateful. ", 
                                             "I have a spare key I can give you, see if you can find where to use it."};
 
     [SerializeField] TMP_Text dialogue_text; 

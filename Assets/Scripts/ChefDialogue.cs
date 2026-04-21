@@ -5,7 +5,6 @@ public class ChefDialogue : MonoBehaviour
 {
     string[] initial_dialogue = new string[] {"My cafe is almost all set up!",
     "Only one tiny problem... I don't have any power to use my oven.",
-    "With no power I can't cook any of my delicious food. And with no food I can't feed any hungry customers!",
     "Oh, will you help me? Bring me a solar panel so I can start baking?"};
 
     string[] panel_dialogue = new string[] {"Great! Now I can power my oven and start baking.", 

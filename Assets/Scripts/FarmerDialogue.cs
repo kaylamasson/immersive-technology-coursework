@@ -3,7 +3,7 @@ using TMPro;
 
 public class FarmerDialogue : MonoBehaviour
 {
-    string[] initial_dialogue = new string[] {"Can you help me? I need help to power my barn.",
+    string[] initial_dialogue = new string[] {"Nice to meet you! Welcome to Sunshine Island.",
     "I've just finished building my farm but I need energy to keep the animals warm at night.",
     "If you find a solar panel please bring it to me!"};
 
@@ -18,8 +18,6 @@ public class FarmerDialogue : MonoBehaviour
     [SerializeField] GameObject barnSolarPanel;
 
     [SerializeField] GameObject solarPanelObject;
-
-    // [SerializeField] GameObject solarPanel_grabbable; 
 
 
     private bool panelReturned; 

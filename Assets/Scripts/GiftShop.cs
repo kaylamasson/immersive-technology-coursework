@@ -53,4 +53,5 @@ public class GiftShop : MonoBehaviour
         purchasedMenu.SetActive(true);
 
     }
+    
 }

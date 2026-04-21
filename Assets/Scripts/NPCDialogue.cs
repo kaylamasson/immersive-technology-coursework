@@ -117,5 +117,10 @@ public class NPCDialogue : MonoBehaviour
 
 
     }
+
+    public void PlaySound()
+    {
+        this.GetComponent<AudioSource>().Play(); 
+    }
 }
 

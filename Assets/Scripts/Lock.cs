@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lock : MonoBehaviour
 {
 
-   [SerializeField] GameObject door;
+   [SerializeField] GameObject gate;
    [SerializeField] GameObject key;
 
     private bool locked;
@@ -15,9 +15,7 @@ public class Lock : MonoBehaviour
     void Start()
     {
         locked = true;
-        door.GetComponent<Rigidbody>().isKinematic = true;
-
-
+        gate.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,18 +27,20 @@ public class Lock : MonoBehaviour
 
             if (other.gameObject.name == key.gameObject.name)
             {
-              UnlockDoor();
+              UnlockGate();
             }
         }
     }
 
-    private void UnlockDoor()
+    private void UnlockGate()
     {
-        door.GetComponent<Rigidbody>().isKinematic = false;
+        gate.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<BoxCollider>().isTrigger = false;
 
         locked = false;
+
+        this.GetComponent<AudioSource>().Play();
 
     }
     
