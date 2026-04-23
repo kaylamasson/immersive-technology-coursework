@@ -27,6 +27,7 @@ public class NPCDialogue : MonoBehaviour
     private int counter;
 
     private AudioSource winNoise;
+    
 
     void Start()
     {
@@ -48,7 +49,6 @@ public class NPCDialogue : MonoBehaviour
     {
 
         if (other.tag=="Player" && hatReturned == false){
-
             startButton.gameObject.SetActive(true);
             ShowMessage(initial_dialogue[0]);
             counter ++; 
@@ -97,6 +97,7 @@ public class NPCDialogue : MonoBehaviour
             } else {
                 counter = 0; 
                 dialogueSystem.SetActive(false);
+
             }
         } else {
 

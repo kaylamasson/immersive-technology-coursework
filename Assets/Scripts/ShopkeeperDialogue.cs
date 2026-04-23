@@ -19,6 +19,7 @@ public class ShopkeeperDialogue : MonoBehaviour
 
 
     private bool panelReturned; 
+    
 
     private int counter;
 
@@ -42,12 +43,11 @@ public class ShopkeeperDialogue : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag=="Player" && panelReturned == false){
+        if (other.tag=="Player" && panelReturned == false){ //
             startButton.gameObject.SetActive(true);
             ShowMessage(initial_dialogue[0]);
             counter ++; 
         } else if (other.tag=="solarPanel"){
-
             dialogueSystem.gameObject.SetActive(true);
             ShowMessage(panel_dialogue[0]); 
             counter ++; 
@@ -78,7 +78,6 @@ public class ShopkeeperDialogue : MonoBehaviour
     public void NextDialogue()
     {
         if (panelReturned == false){
-            
             if (counter < initial_dialogue.Length){
             ShowMessage(initial_dialogue[counter]);
             counter ++; 

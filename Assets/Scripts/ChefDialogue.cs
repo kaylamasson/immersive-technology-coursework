@@ -21,6 +21,8 @@ public class ChefDialogue : MonoBehaviour
 
     private AudioSource winNoise;
 
+
+
     // [SerializeField] GameObject solarPanel_grabbable; 
 
 
@@ -84,7 +86,6 @@ public class ChefDialogue : MonoBehaviour
             if (counter < initial_dialogue.Length){
             ShowMessage(initial_dialogue[counter]);
             counter ++; 
-
             } else {
                 counter = 0; 
                 dialogueSystem.SetActive(false);

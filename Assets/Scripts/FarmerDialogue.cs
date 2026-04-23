@@ -26,6 +26,8 @@ public class FarmerDialogue : MonoBehaviour
 
     private AudioSource winNoise;
 
+
+
     void Start()
     {
         counter = 0; 
@@ -89,6 +91,7 @@ public class FarmerDialogue : MonoBehaviour
             } else {
                 counter = 0; 
                 dialogueSystem.SetActive(false);
+
             }
         } else {
 
